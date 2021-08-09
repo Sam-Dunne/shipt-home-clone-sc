@@ -20,5 +20,6 @@ export const LiveChatBtn = styled.a`
         transition: all 0.2s ease-out;
         background: rgb(14, 105, 83);
         cursor: pointer;
+        text-decoration: underline;
     }
 `;

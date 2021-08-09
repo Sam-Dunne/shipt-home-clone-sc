@@ -5,10 +5,14 @@
 - Utilize the babel plugin for prefixing human readable SC generated classnames
 - Make Single Source of truth for responsive breakpoints
 - Improve vanilla css skills \(goodbye bootstrap\)
-- Use as many of SC's niceities to better understand use cases
-    *element props
-    *GlobalStyle
-    *ThemeProvider
+- Use as many of SC's niceities to better understand use cases for element props, GlobalStyle, ThemeProvider, etc
+ 
+
+## Status/Todo
+- NavbarMenu in mobile transition bug. hamburger animation and flex rules still off
+- Make fixed positioned 'feedback' element 
+- Consider ink rethink for main section wrapper for more global control of view padding
+
 
 ## Available Scripts
 

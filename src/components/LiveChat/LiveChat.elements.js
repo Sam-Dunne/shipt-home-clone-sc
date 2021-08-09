@@ -11,6 +11,7 @@ export const LiveChatBtn = styled.a`
     font-size: 0.9rem;
     border: none;
     border-radius: 25px;
+    text-decoration: none;
     padding: 0.8rem 1.4rem;
     width: fit-content;
     margin: 15px auto;

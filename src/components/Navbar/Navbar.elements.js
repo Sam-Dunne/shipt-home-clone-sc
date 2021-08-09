@@ -82,7 +82,7 @@ export const NavMenu = styled.ul`
      
         /* display: ${props => props.isOpen ? 'flex' : 'none'}; */
         display: ${({click}) => (click ? 'flex' : 'none')};
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: center;
         width: 100vw;
         height: 100vh;

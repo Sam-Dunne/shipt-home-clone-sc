@@ -61,22 +61,24 @@ export const Button = styled.button`
 
 export const HeroH1 = styled.h1`
     font-family: 'Playfair Display', serif;
-    letter-spacing: 0.1rem;
+    
     font-weight: 700;
     font-size: 2.8rem;
     line-height: 1.1;
     max-width: 311px;
     margin: 20px auto;
+    padding-right: 80px;
 
     @media ${device.tablet} {
         font-size: 3.5rem;
-        max-width: 800px;
+        max-width: 600px;
         margin: 20px 0;
+        padding-right: 0;
     }
 `;
 
 export const HeroH3 = styled.h6`
-    font-size: 1.1rem;
+    font-size: 16px;
     font-weight: 200;
     line-height: 1.1;
     margin-top: 30px;
@@ -84,8 +86,7 @@ export const HeroH3 = styled.h6`
     margin: 25px auto;
 
     @media ${device.tablet} {
-        
-        max-width: 800px;
+        max-width: 450px;
         margin: 25px 0;
     }
 `;

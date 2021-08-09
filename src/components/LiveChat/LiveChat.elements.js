@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
 
-export const LiveChatBtn = styled.button`
+export const LiveChatBtn = styled.a`
     position: fixed;
     bottom: 0%;
     right: 2%;
@@ -18,5 +18,6 @@ export const LiveChatBtn = styled.button`
     &:hover {
         transition: all 0.2s ease-out;
         background: rgb(14, 105, 83);
+        cursor: pointer;
     }
 `;

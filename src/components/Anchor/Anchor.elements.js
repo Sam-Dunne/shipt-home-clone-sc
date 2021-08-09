@@ -8,6 +8,11 @@ export const AnchorWrapper = styled.div`
     justify-content: center;
     align-items: center;
     background-color: rgb(36, 18, 57);
+
+    &:hover {
+        background-color: rgb(3,135,103);
+        transition: all 0.3s ease-in-out; 
+    }
 `;
 
 export const MarketingAnchor = styled.a`

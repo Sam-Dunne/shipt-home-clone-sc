@@ -64,15 +64,15 @@ export const ActionBtn = styled.button`
 export const HeroImage = styled.img`
     display: block;
     object-fit: cover;
-    margin: 100px auto;
+    margin: 30px auto;
     width: 311px;
     height: 350px;
-
     border-radius: 15px;
     
     @media ${device.tablet} {
       display: inline-block;
       height: fit-content;
+      margin: 100px auto;
       width: 99%;
     }
 

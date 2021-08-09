@@ -4,7 +4,7 @@ import { LiveChatBtn } from './LiveChat.elements';
 const LiveChat = () => {
     return (
         <>
-           <LiveChatBtn>Live Chat</ LiveChatBtn> 
+           <LiveChatBtn href=''>GitHub Repo</ LiveChatBtn> 
         </>
     )
 }

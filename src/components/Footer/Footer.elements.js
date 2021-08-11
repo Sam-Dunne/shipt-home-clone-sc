@@ -13,7 +13,7 @@ export const FooterContainer = styled.div`
 `;
 
 export const FooterSectionWrapper = styled.div`
-    background-color: blue;
+    
     display: flex;
     flex-wrap: wrap;
     min-width: fit-content;
@@ -25,7 +25,7 @@ export const FooterSectionWrapper = styled.div`
 `;
 
 export const FooterSection = styled.div`
-    background-color: tan;
+    
     margin-bottom: 16px;
     padding-right: 12px;
     min-width: fit-content;

@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro';
-import { device } from '../../device'
+import { device } from '../../device';
 import { Container } from '../../globalStyle';
 import { Link } from 'react-router-dom';
 

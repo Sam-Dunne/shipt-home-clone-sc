@@ -5,8 +5,8 @@ export const FooterContainer = styled.div`
     background-color: #f7f4ea;
     height: fit-content;
     width: 100%;
-    padding: 25px;
-
+    padding: 100px 25px;
+    position: relative;
     @media ${device.tablet} {
 
     }
@@ -27,6 +27,7 @@ export const FooterSectionWrapper = styled.div`
 export const FooterSection = styled.div`
     
     margin-bottom: 16px;
+    
     padding-right: 12px;
     min-width: fit-content;
     max-width: 208px;

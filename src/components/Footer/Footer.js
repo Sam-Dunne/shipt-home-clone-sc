@@ -4,6 +4,7 @@ import { FooterContainer, FooterSectionWrapper, FooterSection, FooterLinkSection
 const Footer = () => {
     return (
         <>
+            
             <FooterContainer>
                 <FooterSectionWrapper>
                     <FooterSection>

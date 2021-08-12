@@ -51,6 +51,7 @@ export const ActionBtn = styled.button`
     &:hover {
         transition: all 0.2s ease-out;
         background: rgb(14, 105, 83);
+        cursor: pointer;
     }
     
 

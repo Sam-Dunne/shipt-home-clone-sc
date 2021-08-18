@@ -72,15 +72,13 @@ export const NavMenu = styled.ul`
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    opacity: 1;
     list-style: none;
-    background-color: #fff;
+   
     text-align: center;
     
 
     @media screen and (max-width: 768px) {
      
-        /* display: ${props => props.isOpen ? 'flex' : 'none'}; */
         display: ${({click}) => (click ? 'flex' : 'none')};
         flex-direction: column-reverse;
         justify-content: center;
@@ -90,10 +88,8 @@ export const NavMenu = styled.ul`
         top: -55%;
         right: 0;
         z-index: ${({click}) => (click ? 998 : 0)};
-        opacity: ${({click}) => (click ? 1 : 0 )};
         background: ${({click}) => (click ? 'rgb(36, 18, 57)' : '#fff' )};;
-        transition: all 0.8s ease;
-        transition: none;
+        
     }
 `;
 
@@ -126,7 +122,7 @@ export const NavLinks = styled(Link)`
     padding: 0.5rem 0;
     height: 100%;
     font-weight: 700;
-    font-size: 0.9emem;
+    font-size: 0.9rem;
     &:hover {
        
     }

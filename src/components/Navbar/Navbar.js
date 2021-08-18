@@ -27,24 +27,24 @@ const Navbar = ({ isOpen }) => {
                                 {click ? <FaTimes /> : <FaGripLines />}
                             </MobileBurger>}
                         
-                        <NavMenu  onClick={handleClick} click={click}>
+                        <NavMenu click={click}>
                             <NavItem>
-                                <NavLinks to='/'>Get paid to shop</NavLinks>
+                                <NavLinks to='/' onClick={handleClick}>Get paid to shop</NavLinks>
                             </NavItem>
                             <NavItem>
-                                <NavLinks to='/resume'>Corona Virus Updates</NavLinks>
+                                <NavLinks to='/resume' onClick={handleClick}>Corona Virus Updates</NavLinks>
                             </NavItem>
                             <NavItem>
-                                <NavLinks to='/projects'>Cities</NavLinks>
+                                <NavLinks to='/projects' onClick={handleClick}>Cities</NavLinks>
                             </NavItem>
                             <NavItem>
-                                <NavLinks to='/resume'>Stores</NavLinks>
+                                <NavLinks to='/resume' onClick={handleClick}>Stores</NavLinks>
                             </NavItem>
                             <NavItem>
-                                <NavLinks to='/resume'>Services</NavLinks>
+                                <NavLinks to='/resume' onClick={handleClick}>Services</NavLinks>
                             </NavItem>
 
-                            <Button>Log in</Button>
+                            <Button onClick={handleClick}>Log in</Button>
                         </NavMenu>
                     </NavbarContainer>
                 </Nav>

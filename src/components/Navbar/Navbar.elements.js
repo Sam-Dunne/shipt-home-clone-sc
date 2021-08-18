@@ -57,7 +57,6 @@ export const MobileBurger = styled.div`
     @media screen and (max-width: 768px) {
         display: inline-block;
         transition: all 2s ease;
-        transform: translate(-100%, 60%);
         font-size: 2rem;
         cursor: pointer;
         height: 30px;

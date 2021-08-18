@@ -60,7 +60,7 @@ export const MobileBurger = styled.div`
         font-size: 2rem;
         cursor: pointer;
         height: 30px;
-        align-self: start;
+        align-self: center;
         border-radius: 10px;
         background-color: ${props => props.isOpen ? '#fff' : 'transparent'};
     } 

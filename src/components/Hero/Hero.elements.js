@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro';
-import { Section, HeroH1, HeroH3 } from '../../globalStyle';
+import { Section } from '../../globalStyle';
 import { device } from '../../device';
 
 export const HeroContainer = styled(Section)`

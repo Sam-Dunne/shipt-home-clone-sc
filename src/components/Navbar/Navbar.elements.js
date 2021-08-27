@@ -77,7 +77,6 @@ export const NavMenu = styled.ul`
     
 
     @media screen and (max-width: 768px) {
-     
         display: ${({click}) => (click ? 'flex' : 'none')};
         flex-direction: column-reverse;
         justify-content: center;
@@ -88,7 +87,6 @@ export const NavMenu = styled.ul`
         right: 0;
         z-index: ${({click}) => (click ? 998 : 0)};
         background: ${({click}) => (click ? 'rgb(36, 18, 57)' : '#fff' )};;
-        
     }
 `;
 

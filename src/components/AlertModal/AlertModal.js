@@ -1,24 +1,23 @@
-import React, { useEffect } from 'react';
-import { AlertModalContainer, Alert_Modal__CardBody, Alert_Modal__CardTitle } from './AlertModal.elements';
+import React from 'react';
+import { AlertModalContainer, AlertModalCardBody, AlertModalCardTitle, AlertModalFlexWrapper } from './AlertModal.elements';
+import { FaTimes } from 'react-icons/fa';
 
 const AlertModal = ({ DisplayMe, DisplaySetter, DisplayMsg }) => {
-    console.log(DisplayMe)
-
-    // useEffect(() => {
-
-    // },[])
 
     return (
         <>
             {DisplayMe ?
                 <AlertModalContainer toggle onClick={() => DisplaySetter((currentState) => !currentState)}>
-                    <Alert_Modal__CardTitle>Whoopsies...</Alert_Modal__CardTitle>
-                    <Alert_Modal__CardBody>{DisplayMsg}</Alert_Modal__CardBody>
+                    <AlertModalFlexWrapper>
+                        <AlertModalCardTitle>Whoopsies...</AlertModalCardTitle>
+                        <FaTimes />
+                    </AlertModalFlexWrapper>
+                    <AlertModalCardBody>{DisplayMsg}</AlertModalCardBody>
                 </AlertModalContainer>
                 :
                 <AlertModalContainer >
-                    <Alert_Modal__CardTitle>Whoopsies...</Alert_Modal__CardTitle>
-                    <Alert_Modal__CardBody>{DisplayMsg}</Alert_Modal__CardBody>
+                    <AlertModalCardTitle>Whoopsies...</AlertModalCardTitle>
+                    <AlertModalCardBody>{DisplayMsg}</AlertModalCardBody>
                 </AlertModalContainer>
             }
         </>

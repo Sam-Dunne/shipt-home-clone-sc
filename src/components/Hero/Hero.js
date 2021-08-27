@@ -24,10 +24,12 @@ const Hero = () => {
     // fetched data object from `https://restcountries.eu/rest/v2/name/${countryName}?fullText=true'
     const [countryData, setCountryData] = useState(null);
 
-    // effect runs on intitial page load and whenever countryData state changes
+    // effect runs on intitial page load and when states countryData AND alertDisplayed are false, effect runs focuses countryName input
     useEffect(() => {
+        if(alertDisplayed) return;
+        // console.log('go')
         inputRef.current.focus();
-    }, [countryData])
+    }, [countryData, alertDisplayed])
 
     // trigger API call
     const handleSubmitCountryName = (e) => {
@@ -37,8 +39,7 @@ const Hero = () => {
             handleSetAlertMsg(`User Input is Required`)
             // alert(`User Input is Required`);
             handleToggleAlertDisplayed();
-            // refocuses the cursor to input field
-            inputRef.current.focus();
+           
             return
         }
         fetch(`https://restcountries.eu/rest/v2/name/${countryName}?fullText=true`)
@@ -53,12 +54,11 @@ const Hero = () => {
                     inputRef.current.focus();
                     return;
                 }
+                
                 // setter function for succesful response
                 setCountryData(data[0]);
                 // clears input value state
                 setCountryName('');
-                // refocus input cursor
-                // inputRef.current.focus();
             })
     }
 
@@ -71,15 +71,15 @@ const Hero = () => {
                 <HeroH1 gridArea>Get the things you need from stores you trust.</HeroH1>
                 <HeroH3>Order everything from groceries to household essentials for delivery to your door.</HeroH3>
                 <br></br>
-                <HeroH3>This Input fetches Web API data for Countries, and displays responsively styled with CSS Grid, and has input and response validation (not pretty, but gets the idea across), and utilizes hooks useState, useEffect, useRef.</HeroH3>
-                <Input type='text' placeholder='Search for Country Data' ref={inputRef} value={countryName} onChange={handleInputOnChange}></Input>
+                <HeroH3>This Input fetches Web API data for Countries of the World by name, and displays responsively styled with CSS Grid, and has input and response validation via stateful modal, and utilizes hooks useState, useEffect, useRef.</HeroH3>
+                <Input type='text' placeholder='Enter a World Country name' ref={inputRef} value={countryName} onChange={handleInputOnChange}></Input>
                 {alertDisplayed ? <ActionBtn onClick={handleToggleAlertDisplayed} Hide>Hide Message</ActionBtn> :
                 <ActionBtn onClick={handleSubmitCountryName}>Get Info</ActionBtn>}
                 {/* if countryData state not null, then render */}
                 {countryData &&
                     <>
-                        <Fade>
-                            <DataH1>{countryData?.name}</DataH1>
+                       
+                            <DataH1 >{countryData?.name}</DataH1>
                             <GridDataWrapper>
                                 <DataItemWrapper>
                                     <DataTitle>Capitol</DataTitle>
@@ -98,7 +98,7 @@ const Hero = () => {
                                     <DataH3>{countryData?.subregion}</DataH3>
                                 </DataItemWrapper>
                             </GridDataWrapper>
-                        </Fade>
+                        
                     </>
                 }
                 <HeroImage src='https://www.shipt.com/_next/image?url=https%3A%2F%2Fdruven30vo903.cloudfront.net%2Fshipt%2Fweb%2Fassets%2Fmarketing-hero.jpg&w=1080&q=75'></HeroImage>

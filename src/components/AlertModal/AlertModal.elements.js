@@ -16,11 +16,11 @@ export const AlertModalContainer = styled.div`
     width: 75vw;
     padding: 10px;
     background: rgb(201, 201, 201);
-    box-shadow: 1px -3px 24px 0px rgba(207,52,52,0.8);
-    -webkit-box-shadow: 1px -3px 24px 0px rgba(207,52,52,0.8);
-    -moz-box-shadow: 1px -3px 24px 0px rgba(207,52,52,0.8);
+    box-shadow: 6px 10px 10px -3px rgba(141,25,49,0.83);
+-webkit-box-shadow: 6px 10px 10px -3px rgba(141,25,49,0.83);
+-moz-box-shadow: 6px 10px 10px -3px rgba(141,25,49,0.83);
     transition: 
-        box-shadow 200ms ease-in-out 200ms,
+        box-shadow 300ms ease-in-out 200ms,
         opacity 600ms ease-in-out 200ms,
         z-index 0ms linear 100ms;
     border-radius: 25px;
@@ -40,17 +40,20 @@ export const AlertModalContainer = styled.div`
    
     
     &:hover {
-        
-        /* background: rgb(14, 105, 83); */
-        box-shadow: 1px -3px 24px 8px rgba(14,105,83,0.8);
--webkit-box-shadow: 1px -3px 24px 8px rgba(14,105,83,0.8);
--moz-box-shadow: 1px -3px 24px 8px rgba(14,105,83,0.8);
+        box-shadow: -5px 10px 10px -3px rgba(3,135,103,0.83);
+-webkit-box-shadow: -5px 10px 10px -3px rgba(3,135,103,0.83);
+-moz-box-shadow: -5px 10px 10px -3px rgba(3,135,103,0.83);
         cursor: pointer;
         text-decoration: none;
     }
 `;
 
-export const Alert_Modal__CardTitle = styled.h4`
+export const AlertModalFlexWrapper = styled.div`
+    display: flex;
+`;
+
+export const AlertModalCardTitle = styled.h4`
+    display: inline-block;
     position: relative;
     width: fit-content;
     padding: 10px 16px;
@@ -66,7 +69,7 @@ export const Alert_Modal__CardTitle = styled.h4`
 `;
 
 
-export const Alert_Modal__CardBody = styled.h4`
+export const AlertModalCardBody = styled.h4`
     position: relative;
     text-align: center;
     width: 80%;

@@ -5,29 +5,30 @@ import { HeroH1, HeroH3 } from '../../globalStyle';
 
 const Hero = () => {
     const inputRef = useRef();
-
+    // stateful value of input and onChangeHandler 
     const [countryName, setCountryName] = useState('');
     const handleInputOnChange = (e) => setCountryName(e.target.value);
-
+    // fetched data object from `https://restcountries.eu/rest/v2/name/${countryName}?fullText=true'
     const [countryData, setCountryData] = useState(null);
-
+    // effect runs on intitial page load and whenever countryData state changes
     useEffect(() => {
         inputRef.current.focus();
-    }, [])
+    }, [countryData])
 
+    // trigger API call
     const handleSubmitCountryName = (e) => {
         e.preventDefault();
-        //
+        // empty input field validation
         if (!countryName) {
             alert(`User Input is Required`);
-            // alert.preventDefault();
+            // refocuses the cursor to input field
             inputRef.current.focus();
             return
         }
         fetch(`https://restcountries.eu/rest/v2/name/${countryName}?fullText=true`)
             .then((res) => res.json())
             .then((data) => {
-                // console.log(data.status)
+                // uses response object to prevent user mispelling breakage, resets countryName state to empty string, refocuses cursor to input
                 if (data.status === 404) {
                     alert(`Please check your spelling. Error ${data.status} ${data.message}`);
                     setCountryName('');
@@ -35,8 +36,12 @@ const Hero = () => {
                     inputRef.current.focus();
                     return;
                 }
+                // setter function for succesful response
                 setCountryData(data[0]);
+                // clears input value state
                 setCountryName('');
+                // refocus input cursor
+                // inputRef.current.focus();
             })
     }
 
@@ -49,6 +54,7 @@ const Hero = () => {
                 <HeroH3>This Input fetches Web API data for Countries, and displays responsively styled with CSS Grid, and has input and response validation (not pretty, but gets the idea across), and utilizes hooks useState, useEffect, useRef.</HeroH3>
                 <Input type='text' placeholder='Search for Country Data' ref={inputRef} value={countryName} onChange={handleInputOnChange}></Input>
                 <ActionBtn onClick={handleSubmitCountryName}>Get Info</ActionBtn>
+                {/* if countryData state not null, then render */}
                 {countryData &&
                     <>
                         <Fade>

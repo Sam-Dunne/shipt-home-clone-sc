@@ -57,6 +57,7 @@ export const ActionBtn = styled.button`
     padding: 1.4rem;
     width: 311px;
     margin: 15px auto;
+    outline: none;
 
     &:hover {
         transition: all 0.2s ease-out;

@@ -6,7 +6,7 @@ export const AlertModalContainer = styled.div`
     opacity: ${props => props.toggle ? "1" : "0"};
     
     position: fixed;
-    top: 20%;
+    top: 8%;
     left: 0;
     right:0;
     margin: 0 auto;

@@ -118,11 +118,11 @@ export const GridDataWrapper = styled.div`
       @media ${device.tablet} {
         grid-template-columns: 1fr 1fr;
         grid-template-rows:  1fr 1fr;
-        
+        width: 65%;
       }
 
-      @media ${device.mobileM} {
-      
+      @media ${device.laptop} {
+        width: 50%;
     }
 `;
 
@@ -133,8 +133,8 @@ export const DataItemWrapper = styled.div`
       border-radius: 5px;
       justify-content: center;
       align-items: center;
-      height: 180px;
-      width: 220px;
+      min-height: 180px;
+      width: 100%;      
 
       @media ${device.mobileM} {
        padding: 2rem 3rem;
@@ -144,7 +144,7 @@ export const DataItemWrapper = styled.div`
       @media ${device.tablet} {
        padding: 2rem 3rem;
        height: 150px;
-       width: 250px;
+       
     }
 `;
 

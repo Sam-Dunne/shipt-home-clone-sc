@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertModalContainer, AlertModalCardBody, AlertModalCardTitle, AlertModalFlexWrapper } from './AlertModal.elements';
+import { AlertModalContainer, AlertModalCardBody, AlertModalCardTitle, AlertModalFlexWrapper, SVG_WRAPPER } from './AlertModal.elements';
 import { FaTimes } from 'react-icons/fa';
 
 const AlertModal = ({ DisplayMe, DisplaySetter, DisplayMsg }) => {
@@ -9,8 +9,11 @@ const AlertModal = ({ DisplayMe, DisplaySetter, DisplayMsg }) => {
             {DisplayMe ?
                 <AlertModalContainer toggle onClick={() => DisplaySetter((currentState) => !currentState)}>
                     <AlertModalFlexWrapper>
+                        <SVG_WRAPPER></SVG_WRAPPER>
                         <AlertModalCardTitle>Whoopsies...</AlertModalCardTitle>
-                        <FaTimes />
+                        <SVG_WRAPPER>
+                            <FaTimes />
+                        </SVG_WRAPPER>
                     </AlertModalFlexWrapper>
                     <AlertModalCardBody>{DisplayMsg}</AlertModalCardBody>
                 </AlertModalContainer>

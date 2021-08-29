@@ -62,8 +62,6 @@ const Hero = () => {
             })
     }
 
-    
-
     return (
         <>
             <HeroContainer>
@@ -75,10 +73,9 @@ const Hero = () => {
                 <Input type='text' placeholder='Enter a World Country name' ref={inputRef} value={countryName} onChange={handleInputOnChange}></Input>
                 {alertDisplayed ? <ActionBtn onClick={handleToggleAlertDisplayed} Hide>Hide Message</ActionBtn> :
                 <ActionBtn onClick={handleSubmitCountryName}>Get Info</ActionBtn>}
-                {/* if countryData state not null, then render */}
+                        {/* if countryData state not null, then render */}
                 {countryData &&
                     <>
-                       
                             <DataH1 >{countryData?.name}</DataH1>
                             <GridDataWrapper>
                                 <DataItemWrapper>
@@ -98,7 +95,6 @@ const Hero = () => {
                                     <DataH3>{countryData?.subregion}</DataH3>
                                 </DataItemWrapper>
                             </GridDataWrapper>
-                        
                     </>
                 }
                 <HeroImage src='https://www.shipt.com/_next/image?url=https%3A%2F%2Fdruven30vo903.cloudfront.net%2Fshipt%2Fweb%2Fassets%2Fmarketing-hero.jpg&w=1080&q=75'></HeroImage>

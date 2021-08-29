@@ -58,11 +58,12 @@ export const ActionBtn = styled.button`
     width: 311px;
     margin: 15px auto;
     outline: none;
+    transition: transform 150ms ease-in;
+    cursor: pointer;
 
     &:hover {
-        transition: all 0.2s ease-out;
-        background: ${props => props.Hide ? "rgb(207, 52, 52)" : "rgb(14, 105, 83)"};
-        cursor: pointer;
+        background: rgb(14, 105, 83);
+        transform: scale(.9);
     }
     
 
@@ -106,8 +107,8 @@ export const HeroImage = styled.img`
 export const GridDataWrapper = styled.div`
       display: grid;
       height: fit-content;
-      width: 60%;
-      justify-content: center;
+      width: 80%;
+      justify-items: center;
       align-items: center;
       gap: 25px;
       margin: 0 auto;
@@ -117,43 +118,50 @@ export const GridDataWrapper = styled.div`
       @media ${device.tablet} {
         grid-template-columns: 1fr 1fr;
         grid-template-rows:  1fr 1fr;
+        
       }
 
       @media ${device.mobileM} {
-      width: 80%;
+      
     }
 `;
 
 export const DataItemWrapper = styled.div`
+      display: inline-flex;
+      flex-direction: column;
       background: lightgray;
-      padding: 4rem 5rem;
       border-radius: 5px;
       justify-content: center;
       align-items: center;
       height: 180px;
+      width: 220px;
 
       @media ${device.mobileM} {
        padding: 2rem 3rem;
        height: 120px;
     }
+
+      @media ${device.tablet} {
+       padding: 2rem 3rem;
+       height: 150px;
+       width: 250px;
+    }
 `;
 
 export const DataH1 = styled.h1`
-      font-size: 3rem;
-      width: fit-content;
+      font-size: 2.5rem;
       margin: 60px auto 20px auto;
       text-align: center; 
-      
 `;
 
 export const DataTitle = styled.h4`
+      align-self: center;
       font-weight: 800;
       text-align: center;
       margin: 0 auto 12px auto;
 `;
 
 export const DataH3 = styled.div`
-   
       text-align: center;
       
 `;

@@ -63,7 +63,11 @@ export const ActionBtn = styled.button`
 
     &:hover {
         background: rgb(14, 105, 83);
-        transform: scale(.9);
+        transform: scale(.99);
+    }
+
+    &:active {
+      transform: scale(0.9)
     }
     
 

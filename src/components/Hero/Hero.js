@@ -24,6 +24,9 @@ const Hero = () => {
     // fetched data object from `https://restcountries.eu/rest/v2/name/${countryName}?fullText=true'
     const [countryData, setCountryData] = useState(null);
 
+    // runs only on load to ping https://recipe-registry.herokuapp.com/
+    useEffect(() => fetch('https://recipe-registry.herokuapp.com/'), []);
+
     // effect runs on intitial page load and when states countryData AND alertDisplayed are false, effect runs focuses countryName input
     useEffect(() => {
         if(alertDisplayed) return;

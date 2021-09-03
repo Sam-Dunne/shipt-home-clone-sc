@@ -23,7 +23,7 @@ export const AlertModalContainer = styled.div`
         opacity 600ms ease-in-out 200ms,
         z-index 0ms linear 100ms,
         transform 100ms linear;
-        background: 50ms ease;
+        background: 100ms ease;
     border-radius: 25px;
     text-decoration: none;
 
@@ -45,7 +45,10 @@ export const AlertModalContainer = styled.div`
 -moz-box-shadow: -5px 10px 10px -3px rgba(3,135,103,0.83);
         cursor: pointer;
         text-decoration: none;
-        transform: scale(0.98);
+        transform: scale(0.99);
+    }
+
+    &:active {
         background: rgb(135, 135, 135);
     }
 `;

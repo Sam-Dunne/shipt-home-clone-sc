@@ -16,11 +16,10 @@ export const FooterSectionWrapper = styled.div`
     
     display: flex;
     flex-wrap: wrap;
-    min-width: fit-content;
-    max-width: 416px;
+    width: 444px;
 
     @media ${device.tablet} {
-        justify-self: end;
+        margin: 0 0 0 auto;
 }
 `;
 

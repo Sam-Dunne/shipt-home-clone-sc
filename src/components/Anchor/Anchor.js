@@ -5,7 +5,7 @@ const Anchor = () => {
     return (
         <>
             <AnchorWrapper>
-                <MarketingAnchor>Ready to start saving time?</MarketingAnchor>
+                <MarketingAnchor href='https://recipe-registry.herokuapp.com/' target='blank' rel='noopener noreferrer'>Go to Recipe Registry Full Stack App</MarketingAnchor>
             </AnchorWrapper>
             
             

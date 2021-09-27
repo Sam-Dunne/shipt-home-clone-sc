@@ -72,10 +72,8 @@ export const NavMenu = styled.ul`
     justify-content: space-between;
     align-items: center;
     list-style: none;
-   
     text-align: center;
     
-
     @media screen and (max-width: 768px) {
         display: ${({click}) => (click ? 'flex' : 'none')};
         flex-direction: column-reverse;
@@ -95,7 +93,6 @@ export  const NavItem = styled.li`
     border-bottom: 2px solid transparent;
     padding: 0px 1em;
     
-
     &:hover {
         border-bottom: 2px solid #4b59f7;
     }

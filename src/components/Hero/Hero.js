@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { HeroContainer, Input, ActionBtn, HeroImage, GridDataWrapper, DataH1, DataH3, DataItemWrapper, DataTitle } from './Hero.elements';
-import Fade from 'react-reveal/Fade';
+// import Fade from 'react-reveal/Fade';
 import { HeroH1, HeroH3 } from '../../globalStyle';
 import { AlertModal } from '../index';
 
@@ -61,11 +61,11 @@ const Hero = () => {
                 }
                 
                 // setter function for succesful response
-                // setCountryData(data);
-                console.log(data)
-                console.log(data?.currentConditions?.humidity)
+                setCountryData(data);
+                console.log(data.currentConditions)
+                // console.log(data?.currentConditions?.humidity)
                 // clears input value state
-                // setCountryName('');
+                setCountryName('');
             })
     }
 
@@ -76,37 +76,37 @@ const Hero = () => {
                 <HeroH1 gridArea>Get the things you need from stores you trust.</HeroH1>
                 <HeroH3>Order everything from groceries to household essentials for delivery to your door.</HeroH3>
                 <br></br>
-                <HeroH3>This Input fetches Web API data for Countries of the World by name, and displays responsively styled with CSS Grid, and has input and response validation via stateful modal, and utilizes hooks useState, useEffect, useRef.</HeroH3>
+                <HeroH3>This Input fetches Web API data for weather, and displays responsively styled with CSS Grid, and has input and response validation via stateful modal, and utilizes hooks useState, useEffect, useRef. Misspell your entry for a custom modal.</HeroH3>
                 <Input type='text' placeholder='Enter your city' ref={inputRef} value={countryName} onChange={handleInputOnChange}></Input>
                 {alertDisplayed ? <ActionBtn onClick={handleToggleAlertDisplayed} Hide>Hide Message</ActionBtn> :
                 <ActionBtn onClick={handleSubmitCountryName}>Get Info</ActionBtn>}
                         {/* if countryData state not null, then render */}
                 {countryData &&
                     <>
-                            <DataH1 >{countryData?.name}</DataH1>
+                            <DataH1 >{countryData?.region}</DataH1>
                             <GridDataWrapper>
                                 <DataItemWrapper>
-                                    <DataTitle>Capitol</DataTitle>
-                                    <DataH3>{countryData?.capital}</DataH3>
+                                    <DataTitle>Conditions</DataTitle>
+                                    <DataH3>{countryData?.currentConditions?.comment}</DataH3>
                                 </DataItemWrapper>
                                 <DataItemWrapper>
-                                    <DataTitle>Population</DataTitle>
-                                    <DataH3>{countryData?.population.toLocaleString("en-US")} </DataH3>
+                                    <DataTitle>Temperature</DataTitle>
+                                    <DataH3>{`${countryData?.currentConditions?.temp?.f} degrees F`}</DataH3>
                                 </DataItemWrapper>
                                 <DataItemWrapper>
-                                    <DataTitle>Currency</DataTitle>
-                                    <DataH3>{countryData?.currencies[0]?.name}</DataH3>
+                                    <DataTitle>Precipitation</DataTitle>
+                                    <DataH3>{countryData?.currentConditions?.precip} </DataH3>
                                 </DataItemWrapper>
                                 <DataItemWrapper>
-                                    <DataTitle>Subregion</DataTitle>
-                                    <DataH3>{countryData?.subregion}</DataH3>
+                                    <DataTitle>Wind</DataTitle>
+                                    <DataH3>{`${countryData?.currentConditions?.wind?.mile} mph`}</DataH3>
                                 </DataItemWrapper>
                             </GridDataWrapper>
                     </>
                 }
                 <HeroImage src='https://www.shipt.com/_next/image?url=https%3A%2F%2Fdruven30vo903.cloudfront.net%2Fshipt%2Fweb%2Fassets%2Fmarketing-hero.jpg&w=1080&q=75'></HeroImage>
             </HeroContainer>
-            <Fade>
+            {/* <Fade>
                 <HeroContainer>
                     <HeroH1>Get the things you need from stores you trust.</HeroH1>
                     <HeroH3>Order everything from groceries to household essentials for delivery to your door.</HeroH3>
@@ -123,7 +123,7 @@ const Hero = () => {
                     <ActionBtn>Get started</ActionBtn>
                     <HeroImage src='https://www.shipt.com/_next/image?url=https%3A%2F%2Fdruven30vo903.cloudfront.net%2Fshipt%2Fweb%2Fassets%2Fmarketing-hero.jpg&w=1080&q=75'></HeroImage>
                 </HeroContainer>
-            </Fade>
+            </Fade> */}
 
         </>
     )

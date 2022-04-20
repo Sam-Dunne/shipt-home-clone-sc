@@ -52,6 +52,13 @@ export const Button = styled.button`
         background: ${({ primary }) => (primary ? '#0467FB' : 'rgb(36, 18, 57)')};
         color: #fff
     }
+    
+    &:focus {
+        transition: all 0.3s ease-out;
+        background: #fff;
+        background: ${({ primary }) => (primary ? '#0467FB' : 'rgb(36, 18, 57)')};
+        color: #fff
+    }
 
     @media screen and (max-width: 768px) {
         color: #fff;

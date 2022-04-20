@@ -30,7 +30,7 @@ const Hero = () => {
     useEffect(() => {
         if(alertDisplayed) return;
         // console.log('go')
-        inputRef.current.focus();
+        // inputRef.current.focus();
     }, [countryData, alertDisplayed])
 
     // // trigger API call
@@ -73,11 +73,11 @@ const Hero = () => {
         <>
             <HeroContainer>
                 <AlertModal DisplayMe={alertDisplayed} DisplaySetter={setAlertDisplayed} DisplayMsg={alertMsg}></AlertModal>
-                <HeroH1 gridArea>Get the things you need from stores you trust.</HeroH1>
-                <HeroH3>Order everything from groceries to household essentials for delivery to your door.</HeroH3>
+                <HeroH1 gridArea>Learned much about UI, Responsive Design, and Accessibility building this.</HeroH1>
+                <HeroH3>Plus Styled Components pushed me to handmake some UI features often abstracted by libraries. Press tab to navigate the page by keyboard to see some visual accessibility considerations.</HeroH3>
                 <br></br>
-                <HeroH3>This Input fetches Web API data for weather, and displays responsively styled with CSS Grid, and has input and response validation via stateful modal, and utilizes hooks useState, useEffect, useRef. Misspell your entry for a custom modal.</HeroH3>
-                <Input type='text' placeholder='Enter your city' ref={inputRef} value={countryName} onChange={handleInputOnChange}></Input>
+                <HeroH3>This Input fetches Web API data for weather, and displays responsively styled with CSS Grid, and has input and response validation via state triggered modal, and utilizes hooks useState, useEffect, useRef. Misspell your entry for a custom modal.</HeroH3>
+                <Input type='text' placeholder='Enter your city' alt='Enter your city' ref={inputRef} value={countryName} onChange={handleInputOnChange}></Input>
                 {alertDisplayed ? <ActionBtn onClick={handleToggleAlertDisplayed} Hide>Hide Message</ActionBtn> :
                 <ActionBtn onClick={handleSubmitCountryName}>Get Info</ActionBtn>}
                         {/* if countryData state not null, then render */}
@@ -104,7 +104,7 @@ const Hero = () => {
                             </GridDataWrapper>
                     </>
                 }
-                <HeroImage src='https://www.shipt.com/_next/image?url=https%3A%2F%2Fdruven30vo903.cloudfront.net%2Fshipt%2Fweb%2Fassets%2Fmarketing-hero.jpg&w=1080&q=75'></HeroImage>
+                <HeroImage type="image" alt='Shipt Shopper making delivery' src='https://www.shipt.com/_next/image?url=https%3A%2F%2Fdruven30vo903.cloudfront.net%2Fshipt%2Fweb%2Fassets%2Fmarketing-hero.jpg&w=1080&q=75'></HeroImage>
             </HeroContainer>
             {/* <Fade>
                 <HeroContainer>

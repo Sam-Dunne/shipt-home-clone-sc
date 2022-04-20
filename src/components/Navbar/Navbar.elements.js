@@ -38,11 +38,15 @@ export const NavbarContainer = styled(Container)`
 `;
 
 export const NavLogo = styled.img`
-    cursor: pointer;
+    cursor: none;
     align-self: center;
     min-height: 32px;
     max-height: 36px;
     margin-right: 10px;
+
+    &:focus {
+        border-bottom: 2px solid #4b59f7;
+    }
 
     @media screen and (max-width: 768px) {
         display: flex;

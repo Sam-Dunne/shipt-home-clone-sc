@@ -24,6 +24,10 @@ export const MarketingAnchor = styled.a`
         background-color: rgb(3,135,103);
     }
 
+    &:focus {
+        background-color: rgb(3,135,103);
+    }
+
     &:active {
         text-decoration: underline;
     }

@@ -10,7 +10,14 @@ import { Nav, NavbarContainer, NavLogo, MobileBurger, NavMenu, NavItem, NavLinks
 const Navbar = ({ isOpen }) => {
     const [click, setClick] = useState(false);
 
-    const handleClick = () => setClick(!click);
+    const deadLink = () => {
+        alert(`These links don't go anywhere...I only built the homepage`)
+    }
+    const handleClick = () => {
+        setClick(!click);
+        deadLink();
+    }
+
 
     return (
         <>

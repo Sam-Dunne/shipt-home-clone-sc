@@ -31,7 +31,7 @@ export const Input = styled.input`
     margin: auto;
 
     &:focus{
-      outline: none;
+      outline: #4b59f7 solid 2px;
     }
     
 
@@ -62,6 +62,11 @@ export const ActionBtn = styled.button`
     cursor: pointer;
 
     &:hover {
+        background: rgb(14, 105, 83);
+        transform: scale(.99);
+    }
+
+    &:focus {
         background: rgb(14, 105, 83);
         transform: scale(.99);
     }

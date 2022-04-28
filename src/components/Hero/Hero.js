@@ -46,7 +46,13 @@ const Hero = () => {
         }
         
         // (`https://restcountries.eu/rest/v2/name/${countryName}?fullText=true`)
-        fetch(`https://weatherdbi.herokuapp.com/data/weather/${countryName}`)
+        fetch(`https://weatherdbi.herokuapp.com/data/weather/${countryName}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin' : 'https://blooming-wave-03926.herokuapp.com/',
+        }
+    })
             .then((res) => res.json())
             .then((data) => {
                 // uses response object to prevent user mispelling breakage, resets countryName state to empty string, refocuses cursor to input

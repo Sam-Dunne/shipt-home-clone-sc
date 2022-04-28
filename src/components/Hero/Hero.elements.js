@@ -116,22 +116,23 @@ export const HeroImage = styled.img`
 export const GridDataWrapper = styled.div`
       display: grid;
       height: fit-content;
-      width: 80%;
+      width: 16em;
       justify-items: center;
       align-items: center;
-      gap: 25px;
-      margin: 0 auto;
-      grid-template-columns: 1fr;
-      grid-template-rows:  1fr 1fr 1fr 1fr;
+      gap: 15px;
+      margin: 1em auto 0 auto;
+      /* grid-template-columns: 1fr;
+      grid-template-rows:  1fr 1fr 1fr 1fr; */
 
       @media ${device.tablet} {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows:  1fr 1fr;
-        width: 65%;
+        width: 12em;
       }
-
+      
       @media ${device.laptop} {
-        width: 50%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        min-width: fit-content;
+        width: 20em;
     }
 `;
 
@@ -142,32 +143,71 @@ export const DataItemWrapper = styled.div`
       border-radius: 5px;
       justify-content: center;
       align-items: center;
-      min-height: 180px;
+      min-height: 3em;
       width: 100%;      
+      padding: 1rem 1rem;
 
       @media ${device.mobileM} {
-       padding: 2rem 3rem;
-       height: 120px;
+       /* height: 3em; */
     }
 
       @media ${device.tablet} {
-       padding: 2rem 3rem;
-       height: 150px;
+       padding: 1em 1em;
+       /* height: 4em; */
        
     }
 `;
 
+export const ResponseInputWrapper = styled.div`
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      
+      @media ${device.mobileM} {
+        margin: 0;
+      }
+      
+      @media ${device.tablet} {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+       
+    }
+`;
+
+export const ResponseWrapper = styled.div`
+      margin: 2em auto;
+      
+      
+      @media ${device.tablet} {
+        /* display: flex;
+        justify-content: center;
+        align-items: center;   */
+    }
+      @media ${device.laptop} {
+        display: inline;
+        justify-content: flex-end;
+        align-items: center;  
+        margin: 0 auto;
+    }
+`;
+
 export const DataH1 = styled.h1`
-      font-size: 2.5rem;
-      margin: 60px auto 20px auto;
+      font-size: 1em;
+      /* margin: 60px auto 20px auto; */
       text-align: center; 
+      display: block;
 `;
 
 export const DataTitle = styled.h4`
       align-self: center;
       font-weight: 800;
       text-align: center;
-      margin: 0 auto 12px auto;
+      margin: auto;
+      font-size: 0.7em;
+      /* margin: 0 auto 12px auto; */
 `;
 
 export const DataH3 = styled.div`
